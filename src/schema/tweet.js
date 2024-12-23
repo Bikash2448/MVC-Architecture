@@ -6,9 +6,13 @@ const tweetSchema = new mongoose.Schema({
         required: true,
         trim:true,
         maxlength:280
+    },
+    image:{
+        type:String,
+        default:null
     }
 
-})
+},{timestamps:true})
 
 const tweet = mongoose.model("tweet",tweetSchema)
 export default tweet;
